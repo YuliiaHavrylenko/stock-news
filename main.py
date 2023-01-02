@@ -2,9 +2,9 @@ import requests
 from datetime import datetime, timedelta
 from twilio.rest import Client
 
-account_sid = "AC630e6a2c542d9c7730c0bdf40cdf3f09"
-auth_token = "4f466656bc9eae465e4edb923be397cb"
-api_key = "cbafdfd562a02dffdff2addbd7c2952e"
+account_sid = "accountsid"
+auth_token = "auth_token"
+api_key = "api_key"
 
 STOCK = "TSLA"
 COMPANY_NAME = "Tesla Inc"
@@ -42,8 +42,8 @@ def send_message():
             .create(
                 body=f"{STOCK} {smile} \n"
                      f"{headlines[i]}",
-                from_="+19794288972",
-                to="+971585920990"
+                from_="number",
+                to="number"
             )
         print(message.status)
 
